@@ -1,0 +1,15 @@
+# Application dependencies
+
+require:
+    - play
+    - security-module -> security-module latest.integration
+    - core -> core latest.integration
+
+
+repositories:
+    - My modules:
+        type:       local
+        artifact:   ${application.path}/../[module]
+        contains:
+            - security-module
+            - core
